@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PenggunaController;
+// use App\Http\Controllers\LoginController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -8,11 +11,17 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+route::get('/index', [PenggunaController::class, 'index'])->name('pengguna.index');
+route::get('/pengguna/create', [PenggunaController::class, 'create'])->name('pengguna.create');
+route::post('/pengguna/store', [PenggunaController::class, 'store'])->name('pengguna.store');
+route::get('/pengguna/edit{data}', [PenggunaController::class, 'edit'])->name('pengguna.edit');
+route::put('/pengguna/update{data}', [PenggunaController::class, 'update'])->name('pengguna.update');
+route::delete('/pengguna/destroy{data}', [PenggunaController::class, 'destroy'])->name('pengguna.destroy');
+route::get('/pengguna/detail{data}', [PenggunaController::class, 'detail'])->name('pengguna.detail');
