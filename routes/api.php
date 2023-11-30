@@ -18,7 +18,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-route::get('/index', [PenggunaController::class, 'indexApi']);
-route::get('/index/{id}', [PenggunaController::class, 'showApi']);
-route::post('/pengguna/store', [PenggunaController::class, 'storeApi']);
-route::delete('/pengguna/{id}', [PenggunaController::class, 'destroy']);
+// route::get('/index', [PenggunaController::class, 'indexApi']);
+// route::get('/index/{id}', [PenggunaController::class, 'showApi']);
+// route::post('/pengguna/store', [PenggunaController::class, 'storeApi']);
+// route::delete('/pengguna/{id}', [PenggunaController::class, 'destroy']);

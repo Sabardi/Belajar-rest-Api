@@ -9,11 +9,11 @@ use App\Models\pengguna;
 
 class PenggunaController extends Controller
 {
-    // public function index()
-    // {
-    //     $user = Pengguna::all();
-    //     return view('pengguna.index', compact('user'));
-    // }
+    public function index()
+    {
+        $user = Pengguna::all();
+        return view('pengguna.index', compact('user'));
+    }
 
     // Api nya
     public function indexApi()
